@@ -141,7 +141,7 @@ while ($data2 = mysqli_fetch_array($rs2, MYSQLI_BOTH)) {
 <div class="container" align="center">
 <div class="row" align="center">
 <?php
-$kw = $_POST['kw'] ;
+@$kw = $_POST['kw'] ;
 $pt = $_GET['pt'] ;
 if (isset($_GET['pt'])) {
 $s = "and (p_type = '$pt')";
