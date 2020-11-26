@@ -12,7 +12,7 @@
 		$_SESSION['sprice'][$id] = $data['p_price'];
 		$_SESSION['sdetail'][$id] = $data['p_detail'];
 		$_SESSION['spicture'][$id] = $data['p_picture'];
-		$_SESSION['sitem'][$id]++;
+		@$_SESSION['sitem'][$id]++;
 	}
 ?>
 <!DOCTYPE html>
@@ -182,9 +182,9 @@
 <?php
 if(!empty($_SESSION['sid'])) {
 	foreach($_SESSION['sid'] as $pid) {
-		$i++;
+		@$i++;
 		$sum[$pid] = $_SESSION['sprice'][$pid] * $_SESSION['sitem'][$pid] ;
-		$total += $sum[$pid] ;
+		@$total += $sum[$pid] ;
 ?>
 	<tr>
 		<td><strong><?=$i;?></strong></td>
